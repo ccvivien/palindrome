@@ -3,4 +3,6 @@
 ```
 setup
 make
+
+ruby test.rb
 ```
