@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ruby extconf.rb
+sed -i "s/\(OBJS = palindrome.o\)$/\1 is_palindrome.o/" Makefile

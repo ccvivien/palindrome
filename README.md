@@ -1,0 +1,6 @@
+# Palindrome
+
+```
+setup
+make
+```
