@@ -1,5 +1,4 @@
 #include "ruby.h"
-#include <stdio.h>
 
 extern int is_palindrome(char*, long);
 
