@@ -7,6 +7,9 @@
 is_palindrome:
 	push {r4, r5}
 
+	cmp r1, #1
+	ble exit
+
 	eor r2, r2      // i = 0
 	add r3, r1, #-1 // j = len - 1
 	lsr r1, r1, #1  // len / 2
