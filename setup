@@ -1,4 +1,12 @@
 #!/bin/bash
 
+if uname -m | grep -q arm; then
+	arch="arm"
+else
+	arch="x64"
+fi
+
+echo is_palindrome_$arch.o
+
 ruby extconf.rb
-sed -i "s/\(OBJS = palindrome.o\)$/\1 is_palindrome.o/" Makefile
+sed -i "s/\(OBJS = palindrome.o\)$/\1 is_palindrome_$arch.o/" Makefile
