@@ -5,9 +5,10 @@
 // r0 char *s
 // r1 long len
 is_palindrome:
-	push	{r4, r5}
+	push	{r4, r5, lr}
 
 	cmp 	r1, #1
+	movle   r0, #1
 	ble 	exit
 
 	eor 	r2, r2      // i = 0
@@ -24,6 +25,7 @@ loop:
 	add 	r3, r3, #-1
 	cmp 	r2, r1
 	blt 	loop
+
+	mov	r0, #1
 exit:
-	pop 	{r4, r5}
-	bx 	lr
+	pop 	{r4, r5, pc}
