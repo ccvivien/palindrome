@@ -12,7 +12,7 @@ is_palindrome:
 
 	eor r2, r2      // i = 0
 	add r3, r1, #-1 // j = len - 1
-	lsr r1, r1, #1  // len / 2
+	lsr r1, r1, #1  // k = len / 2
 loop:
 	ldrb r4, [r0, r2]
 	ldrb r5, [r0, r3]
